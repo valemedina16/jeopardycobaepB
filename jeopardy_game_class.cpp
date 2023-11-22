@@ -19,7 +19,7 @@ JeopardyGame::JeopardyGame(string fileName)
         throw "Error: No se puede abrir el nombre del archivo vacio.";
     this->m_file_name = fileName;
     this->readFile();
-    this->m_last_message = CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m - Bienvenidos a Jeopady COBAEP P22! Seleccione una pregunta escribiendo categoría y número (ej. A2)";
+    this->m_last_message = CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m - ¡Bienvenidos a Jeopady COBAEP P22! Selecciona una pregunta escribiendo categoría y número (ej. A2)";
     this->runGame();
     
     
@@ -47,13 +47,13 @@ void JeopardyGame::runGame()
         }
         else if(returnVal > 0) // Correct answer - Add points to the m_total_score & increment m_total_tries
         {
-            this->m_last_message = " "+CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m  : ¡Eso es correcto! ¿Cuál es tu proxima elección?";
+            this->m_last_message = " "+CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m  : ¡Eso es correcto! ¿Cuál es tu próxima elección?";
             this->m_total_score += returnVal;
             this->m_total_tries++;
         }
         else if(returnVal == -1) // Incorrect answer - increment m_total_tries;
         {
-            this->m_last_message = " "+CHAR_ESC+"[1;33m[ MESSAGE ]"+CHAR_ESC+"[0m : Eso es incorrecto ¡Lo siento! :( ¿Cuál es tu proxima elección?";
+            this->m_last_message = " "+CHAR_ESC+"[1;33m[ MESSAGE ]"+CHAR_ESC+"[0m : Eso es incorrecto ¡Lo siento! :( ¿Cuál es tu próxima elección?";
             this->m_total_tries++;
         }
         else if(returnVal == -2) // Not a valid input
@@ -85,7 +85,7 @@ void JeopardyGame::showEndScreen() const
     t.setAlignment( 2, TextTable::Alignment::LEFT );
     cout << endl;
     cout << t;
-    cout << endl << endl << CHAR_ESC+"[1;45m" << spacer2 << "¡BUEN TRABAJO! Gracias por Jugar Jeopardy COBAEP P22:)" << spacer2 << CHAR_ESC+"[0m\n\n\n";
+    cout << endl << endl << CHAR_ESC+"[1;45m" << spacer2 << "¡BUEN TRABAJO! Gracias por Jugar Jeopardy COBAEP P22 :)" << spacer2 << CHAR_ESC+"[0m\n\n\n";
 }
 
 void JeopardyGame::readFile()
@@ -199,13 +199,18 @@ int JeopardyGame::getTries() const
 
 void JeopardyGame::showTitle() const
 {
-    cout << endl 
-            << "  CCCC   OOO   BBBB   AAAA  EEEE  PPPP       PPPP   2222   2222 " << endl
-            << " C      O   O  B   B A    A E     P   P     P   P  2   2  2   2" << endl
-            << "C      O     O B   B AAAAA EEEE  PPPP      PPPP      2     2  " << endl
-            << " C      O   O  B   B A    A E     P         P      2    2    " << endl
-            << "  CCCC   OOO   BBBB  A    A EEEE  P         P    2222   2222 " << endl
-            << endl;
+cout << endl
+            << "  ______    ______   _______    ______   ________  _______         _______    ______    ______  " << endl
+            << " /      \\  /      \\ /       \\  /      \\ /        |/       \\       /       \\  /      \\  /      \\ " << endl
+            << "/$$$$$$  |/$$$$$$  |$$$$$$$  |/$$$$$$  |$$$$$$$$/ $$$$$$$  |      $$$$$$$  |/$$$$$$  |/$$$$$$  |" << endl
+            << "$$ |  $$ |$$ |  $$ |$$ |__$$ |$$ |__$$ |$$ |__    $$ |__$$ |      $$ |__$$ |$$____$$ |$$____$$ |" << endl
+            << "$$ |      $$ |  $$ |$$    $$< $$    $$ |$$    |   $$    $$/       $$    $$/  /    $$  |/$$    $$/ " << endl
+            << "$$ |   __ $$ |  $$ |$$$$$$$  |$$$$$$$$ |$$$$$/    $$$$$$$/        $$$$$$$/  /$$$$$$  |/$$$$$$/  " << endl
+            << "$$ \\__/  |$$ \\__$$ |$$ |__$$ |$$ |  $$ |$$ |_____ $$ |            $$ |      $$ |__$$ |$$ |_____ " << endl
+            << "$$    $$/ $$    $$/ $$    $$/ $$ |  $$ |$$       |$$ |            $$ |      $$    $$/ $$       |" << endl
+            << " $$$$$$/   $$$$$$/  $$$$$$$/  $$/   $$/ $$$$$$$$/ $$/             $$/       $$$$$$$/  $$$$$$$$/ " << endl
+            << "                                                                                                 " << endl
+            << "                                                                                                 " << endl;
 }
 
 
@@ -221,9 +226,9 @@ void JeopardyGame::showBoard() const
     TextTable t( '~', '|', '+' );
     t.add("Puntaje:" + to_string(this->getScore())); // Display score on top of table
     t.add(" ");
-    t.add("Los intentos disponibles: " + to_string(totalAvailableTries - this->getTries())); // Display tries remaining on top of table
-    t.add(spacer + spacer + " Keys:" ); // Helper keys
-    t.add(" X=Salir  |  H=Ayuda");
+    t.add("Intentos disponibles: " + to_string(totalAvailableTries - this->getTries())); // Display tries remaining on top of table
+    t.add(spacer + spacer + " Claves:" ); // Helper keys
+    t.add(" X = Salir | H = Ayuda");
     t.endOfRow();
     t.add(filler);
     for(int i = 0; i < this->m_num_categories; i++) // Populate table with a filler "#"
@@ -231,7 +236,7 @@ void JeopardyGame::showBoard() const
         t.add(filler);
     }
     t.endOfRow();
-    t.add(small_spacer + "Categorias:" + small_spacer);
+    t.add(small_spacer + "Categorías:" + small_spacer);
     for(int i = 0; i < this->m_num_categories; i++) // Populate table with category names
     {
         t.add(spacer + this->m_category_names[i] + spacer);
@@ -316,12 +321,12 @@ void JeopardyGame::showHelp() const
     this->showTitle();
     TextTable t( '-', '|', '+' );
     t.add(" Selecciona una pregunta: ");
-    t.add(" Utilice el valor de letra y numero para la pregunta que desea seleccionar (por ejemplo, B3). ");
+    t.add(" Utilice el valor de letra y número para la pregunta que desea seleccionar (por ejemplo, B3). ");
     t.endOfRow();
     t.add(" Reintentos: ");
-    t.add(" Solo se le permite un intento por pregunta, asi que elija sabiamente antes de seleccionar. ");
+    t.add(" Solo se le permite un intento por pregunta, así que elija sabiamente antes de seleccionar. ");
     t.endOfRow();
-    t.add(" Suma/deduccion de puntos: ");
+    t.add(" Suma/deducción de puntos: ");
     t.add(" Obtienes puntos agregados por las respuestas correctas pero no pierdes ningun punto por las incorrectas. ");
     t.endOfRow();
     t.setAlignment( 2, TextTable::Alignment::LEFT );
@@ -335,13 +340,13 @@ void JeopardyGame::displayQuestion(int cat, int ques, vector<string> &answers) c
 {
     const string small_spacer = "        ";
     TextTable t( '-', '|', '+' );
-    t.add("##  Pregunta Jeopardy: " + small_spacer); // Display the question itself
+    t.add("##  Pregunta: " + small_spacer); // Display the question itself
     t.endOfRow();
     t.add(small_spacer + this->m_game_elements[cat][ques].getQuestion() + small_spacer);
     t.endOfRow();
     t.add(" ");
     t.endOfRow();
-    t.add("##  Respuestas Posibles:" + small_spacer);
+    t.add("##  Respuestas posibles:" + small_spacer);
     t.endOfRow();
     for(int i = 0; i < answers.size(); i++) // Display each possible answer
     {
