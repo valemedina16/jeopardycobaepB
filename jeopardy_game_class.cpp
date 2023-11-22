@@ -19,7 +19,7 @@ JeopardyGame::JeopardyGame(string fileName)
         throw "Error: No se puede abrir el nombre del archivo vacio.";
     this->m_file_name = fileName;
     this->readFile();
-    this->m_last_message = CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m - Bienvenidos a Jeopady COBAEP! Seleccione una pregunta escribiendo categoria y numero (ej. A2)";
+    this->m_last_message = CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m - Bienvenidos a Jeopady COBAEP P22! Seleccione una pregunta escribiendo categoría y número (ej. A2)";
     this->runGame();
     
     
@@ -47,13 +47,13 @@ void JeopardyGame::runGame()
         }
         else if(returnVal > 0) // Correct answer - Add points to the m_total_score & increment m_total_tries
         {
-            this->m_last_message = " "+CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m  : Eso es correcto! Cual es tu proxima eleccion?";
+            this->m_last_message = " "+CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m  : ¡Eso es correcto! ¿Cuál es tu proxima elección?";
             this->m_total_score += returnVal;
             this->m_total_tries++;
         }
         else if(returnVal == -1) // Incorrect answer - increment m_total_tries;
         {
-            this->m_last_message = " "+CHAR_ESC+"[1;33m[ MESSAGE ]"+CHAR_ESC+"[0m : Eso es incorrecto! Lo siento :( Cual es tu proxima eleccion?";
+            this->m_last_message = " "+CHAR_ESC+"[1;33m[ MESSAGE ]"+CHAR_ESC+"[0m : Eso es incorrecto ¡Lo siento! :( ¿Cuál es tu proxima elección?";
             this->m_total_tries++;
         }
         else if(returnVal == -2) // Not a valid input
@@ -76,7 +76,7 @@ void JeopardyGame::showEndScreen() const
     const string spacer = "              ";
     const string spacer2 = "                      ";
 
-    t.add(spacer + "Puntuacion Final:" + spacer);
+    t.add(spacer + "Puntuacion final:" + spacer);
     t.add(spacer + to_string(this->getScore()) + spacer);
     t.endOfRow();
     t.add(spacer + "Numero de intentos:" + spacer);
@@ -85,7 +85,7 @@ void JeopardyGame::showEndScreen() const
     t.setAlignment( 2, TextTable::Alignment::LEFT );
     cout << endl;
     cout << t;
-    cout << endl << endl << CHAR_ESC+"[1;45m" << spacer2 << "BUEN TRABAJO! Gracias por Jugar Jeopardy COBAEP :)" << spacer2 << CHAR_ESC+"[0m\n\n\n";
+    cout << endl << endl << CHAR_ESC+"[1;45m" << spacer2 << "¡BUEN TRABAJO! Gracias por Jugar Jeopardy COBAEP P22:)" << spacer2 << CHAR_ESC+"[0m\n\n\n";
 }
 
 void JeopardyGame::readFile()
@@ -200,19 +200,14 @@ int JeopardyGame::getTries() const
 void JeopardyGame::showTitle() const
 {
     cout << endl 
-            <<    "  888888 8888888888  .d88888b.  8888888b.      d8888 8888888b.  8888888b. Y88b   d88P "
-    << endl << "    \"88b 888        d88P\" \"Y88b 888   Y88b    d88888 888   Y88b 888  \"Y88b Y88b d88P  "
-    << endl << "     888 888        888     888 888    888   d88P888 888    888 888    888  Y88o88P   "
-    << endl << "     888 8888888    888     888 888   d88P  d88P 888 888   d88P 888    888   Y888P    "
-    << endl << "     888 888        888     888 8888888P\"  d88P  888 8888888P\"  888    888    888     "
-    << endl << "     888 888        888     888 888       d88P   888 888 T88b   888    888    888     "
-    << endl << "     88P 888        Y88b. .d88P 888      d8888888888 888  T88b  888  .d88P    888     "
-    << endl << "     888 8888888888  \"Y88888P\"  888     d88P     888 888   T88b 8888888P\"     888     "
-    << endl << "   .d88P                                                                              "
-    << endl << " .d88P\"                                                                               "
-    << endl << "888P\"                                                                                 "
-    << endl << endl;
+            << "  CCCC   OOO   BBBB   AAAA  EEEE  PPPP       PPPP   2222   2222 " << endl
+            << " C      O   O  B   B A    A E     P   P     P   P  2   2  2   2" << endl
+            << "C      O     O B   B AAAAA EEEE  PPPP      PPPP      2     2  " << endl
+            << " C      O   O  B   B A    A E     P         P      2    2    " << endl
+            << "  CCCC   OOO   BBBB  A    A EEEE  P         P    2222   2222 " << endl
+            << endl;
 }
+
 
 void JeopardyGame::showBoard() const
 {
