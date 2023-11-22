@@ -1,0 +1,112 @@
+//////////////////////////////////////
+//                                  //
+//    How the file is structured:   //
+//                                  //
+//////////////////////////////////////
+
+// ^ = Numero de preguntas por categoria
+// $ = Numero de categorias
+// # = Nombre de la categoria
+// ~ = Senalizador de nueva categoria
+// * = Senalizador de nueva pregunta
+// % = Valor del punto de pregunta
+// @ = Opcion de respuesta incorrecta
+// & = Opcion de respuesta correcta
+
+// BEGIN FILE DATA: 
+
+^ 3
+$ 4
+
+# Animales
+# Carros
+# Musica
+# Peliculas
+
+~ Animales
+* El animal terrestre mas rapido del mundo.
+% 100
+@ Sera un elefante?
+@ Sera un leon?
+@ Sera un leopardo?
+& Sera un guepardo?
+
+* Puede vivir hasta 150 años
+% 200
+@ Sera un mamut?
+& Sera una tortuga?
+@ Sera un aguila?
+@ Sera un rinoceronte?
+
+* Numero de corazones de un pulpo.
+% 300
+& ¿Serán 3?
+@ ¿Serán 0?
+@ ¿Serán 4?
+@ ¿Serán 1?
+
+~ Coches
+* El coche más rápido del mundo.
+% 100
+@ ¿Será un Ford Mustang GT?
+& ¿Será un Buggati Chiron?
+@ ¿Será un Ferrari LaFerrari?
+@ ¿Será un Audi R8 V10 Plus?
+
+*Es responsable de garantizar que la batería de su automóvil permanezca cargada.
+% 200
+@ ¿Será un velocímetro?
+@ ¿Será un cigüeñal?
+& ¿Será un alternador?
+@ ¿Será un sobrealimentador?
+
+* Es la computadora principal de un auto
+% 300
+@ ¿Será la transmisión?
+& ¿Será una ECU?
+@ ¿Será una caja de fusibles?
+@ ¿Será una TCU?
+
+~ Música
+*Es el mejor rapero de todos los tiempos.
+% 100
+@ ¿Será Jay Z?
+& ¿Será Lil Wayne?
+@ ¿Quién es Flava Flave?
+@ ¿Quién es el Príncipe?
+
+* Se conoce como varias teclas de piano presionadas juntas
+% 200
+@ ¿Será un riff?
+@ ¿Será una melodía?
+& ¿Será un acorde?
+@ ¿Será una barra?
+
+* Creó canciones como "Un Amor de Verdad" y "WE Only Have Tonight"
+% 300
+@ ¿Morat?
+@ ¿Thalia?
+@ ¿Sin Bandera?
+& ¿Reik?
+
+~ Películas
+* Incluye El Caballero Oscuro y El Caballero Oscuro Asciende
+% 100
+@ ¿Superman?
+& ¿Batman?
+@ ¿Los Increíbles?
+@ ¿Jurassic World?
+
+* Película basada en un libro de Jane Austen.
+% 200
+& ¿Orgullo y Prejuicio?
+@ ¿El señor de los anillos?
+@ ¿Harry Potter?
+@ ¿Después de ti?
+
+* Este formato de película salió después del DVD pero antes del streaming.
+% 300
+@ ¿Cinta VHS?
+@ ¿Película para proyector?
+& ¿Disco Blu-Ray?
+@ ¿Disco duro?
