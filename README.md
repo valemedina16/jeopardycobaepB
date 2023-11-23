@@ -1,6 +1,6 @@
-# Jeopardy Game
+# Guego Jeopardy COBAEP P22
 
-This is a jeopardy style game in a console. Not more explination needed.
+Este es un juego estilo jeopardy en una consola.
 
 ## To build & run file
 ```
