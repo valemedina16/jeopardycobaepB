@@ -4,109 +4,109 @@
 //                                  //
 //////////////////////////////////////
 
-// ^ = Numero de preguntas por categoria
-// $ = Numero de categorias
-// # = Nombre de la categoria
-// ~ = Senalizador de nueva categoria
-// * = Senalizador de nueva pregunta
+// ^ = Número de preguntas por categoría
+// $ = Numero de categorías
+// # = Nombre de la categoría
+// ~ = Señalizador de nueva categoría
+// * = Señalizador de nueva pregunta
 // % = Valor del punto de pregunta
-// @ = Opcion de respuesta incorrecta
-// & = Opcion de respuesta correcta
+// @ = Opción de respuesta incorrecta
+// & = Opción de respuesta correcta
 
 // BEGIN FILE DATA: 
 
 ^ 3
 $ 4
 
-# Animales
-# Carros
-# Musica
-# Peliculas
+# Ciencias Naturales
+# Programación
+# Matemáticas
+# Historia
 
-~ Animales
-* El animal terrestre mas rapido del mundo.
+~ Ciencias Naturales
+* ¿Cuál es el animal terrestre mas rápido del mundo?
 % 100
-@ Sera un elefante?
-@ Sera un leon?
-@ Sera un leopardo?
-& Sera un guepardo?
+@ Un Zorro
+@ Un León
+@ Un Tigre
+& Un Guepardo
 
-* Puede vivir hasta 150 años
+* ¿Qué fenómeno natural se produce cuando un sismo ocurre en el fondo del océano y desplaza verticalmente el agua, generando ondas que se propagan?
 % 200
-@ Sera un mamut?
-& Sera una tortuga?
-@ Sera un aguila?
-@ Sera un rinoceronte?
+@ Huracán
+& Tsunami
+@ Corriente marina
+@ Maremoto
 
-* Numero de corazones de un pulpo.
+* ¿Cuál es el gas más abundante en la atmósfera terrestre en términos porcentuales?
 % 300
-& ¿Serán 3?
-@ ¿Serán 0?
-@ ¿Serán 4?
-@ ¿Serán 1?
+& Nitrógeno
+@ Dióxido de carbono
+@ Oxígeno
+@ Ozono
 
-~ Coches
-* El coche más rápido del mundo.
+~ Programación
+* ¿Qué es un bucle "for" utilizado comúnmente en programación?
 % 100
-@ ¿Será un Ford Mustang GT?
-& ¿Será un Buggati Chiron?
-@ ¿Será un Ferrari LaFerrari?
-@ ¿Será un Audi R8 V10 Plus?
+@ Una estructura condicional
+& Un bucle de control de flujo que se repite un número específico de veces
+@ Una forma de definir una función
+@ Un tipo de variable
 
-*Es responsable de garantizar que la batería de su automóvil permanezca cargada.
+* ¿Qué significa la sigla "HTML" en términos de desarrollo web?
 % 200
-@ ¿Será un velocímetro?
-@ ¿Será un cigüeñal?
-& ¿Será un alternador?
-@ ¿Será un sobrealimentador?
+@ High-level Text Manipulation Language
+@ Home Tool Markup Language
+& HyperText Markup Language
+@ Hyperlink and Text Manipulation Language
 
-* Es la computadora principal de un auto
+* ¿Cuál es la característica principal de un lenguaje de programación orientado a objetos?
 % 300
-@ ¿Será la transmisión?
-& ¿Será una ECU?
-@ ¿Será una caja de fusibles?
-@ ¿Será una TCU?
+@ Utiliza solo bucles "for" para iterar
+& Emplea clases y objetos para modelar datos y operaciones
+@ Se enfoca en la programación lineal
+@ No permite la reutilización de código
 
-~ Música
-*Es el mejor rapero de todos los tiempos.
+~ Matemáticas
+* ¿Cuál es la fórmula para calcular el área de un círculo con radio r?
 % 100
-@ ¿Será Jay Z?
-& ¿Será Lil Wayne?
-@ ¿Quién es Flava Flave?
-@ ¿Quién es el Príncipe?
+@ área = 2 × π × r
+& área = π × r^2
+@ área = 1/2 × π × r^2
+@ área = π × r
 
-* Se conoce como varias teclas de piano presionadas juntas
+* ¿Cuál es el resultado de la siguiente operación matemática? (8+2)×5−3
 % 200
-@ ¿Será un riff?
-@ ¿Será una melodía?
-& ¿Será un acorde?
-@ ¿Será una barra?
+@ 20
+@ 12
+& 47
+@ 42
 
-* Creó canciones como "Un Amor de Verdad" y "WE Only Have Tonight"
+* ¿Cuál es el valor de x en la siguiente ecuación?
 % 300
-@ ¿Morat?
-@ ¿Thalia?
-@ ¿Sin Bandera?
-& ¿Reik?
+@ x = 8
+@ x = 15
+@ x = 20
+& x = 5
 
-~ Películas
-* Incluye El Caballero Oscuro y El Caballero Oscuro Asciende
+~ Historia
+* ¿En qué año cayó el Muro de Berlín, un evento significativo que simbolizó el fin de la Guerra Fría?
 % 100
-@ ¿Superman?
-& ¿Batman?
-@ ¿Los Increíbles?
-@ ¿Jurassic World?
+@ 1975
+& 1989
+@ 1991
+@ 1985
 
-* Película basada en un libro de Jane Austen.
+* ¿Quién fue el líder principal de la Revolución Rusa de 1917?
 % 200
-& ¿Orgullo y Prejuicio?
-@ ¿El señor de los anillos?
-@ ¿Harry Potter?
-@ ¿Después de ti?
+& Vladimir Lenin
+@ Joseph Stalin
+@ León Trotsky
+@ Nicolás II
 
-* Este formato de película salió después del DVD pero antes del streaming.
+* ¿Qué evento histórico dio inicio a la Primera Guerra Mundial en 1914?
 % 300
-@ ¿Cinta VHS?
-@ ¿Película para proyector?
-& ¿Disco Blu-Ray?
-@ ¿Disco duro?
+@ La firma del Tratado de Versalles
+@ El hundimiento del Titanic
+& El asesinato del Archiduque Francisco Fernando de Austria
+@ La Revolución Bolchevique
