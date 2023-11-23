@@ -19,7 +19,7 @@ JeopardyGame::JeopardyGame(string fileName)
         throw "Error: No se puede abrir el nombre del archivo vacio.";
     this->m_file_name = fileName;
     this->readFile();
-    this->m_last_message = CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m - ¡Bienvenidos a Jeopady COBAEP P22! Selecciona una pregunta escribiendo categoría y número (ej. A2)";
+    this->m_last_message = CHAR_ESC+"[1;32m[ MESSAGE ]"+CHAR_ESC+"[0m - ¡Bienvenidos a Jeopardy COBAEP P22! Selecciona una pregunta escribiendo categoría y número (ej. A2)";
     this->runGame();
     
     
